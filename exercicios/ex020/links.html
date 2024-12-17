@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+
+        /*
+        SELETORES PERSONALIZADOS
+        # = id
+        . = class
+        : = pseudo-class
+        :: = pseudo-element
+        > = clildren (filho)
+
+
+        */
+        body {
+            font-family: serif;
+        }
+
+        a {
+            color: rgb(226, 61, 11);
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        a:visited {
+           color: rgb(203, 9, 157);
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        a:active {
+            color: blueviolet;
+        }
+
+        .especial {
+            background-color: rgb(193, 182, 182);
+        }
+        
+        .especial::before {
+            content:  ' ⭠ ';
+        }
+
+        .especial::after {
+            content: '  ⭢' ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/emartinsz" target="_blank">Resposotório Git</a></li>
+        <li><a href="https://www.youtube.com/@emzcode" target="_blank" class="especial">Canal do YouTube</a></li>
+        <li><a href="https://www.linkedin.com/in/emily-martins-a1b3642b7/" target="_blank">Linkedin</a></li>
+    </ul>
+</body>
+</html>
